@@ -8,7 +8,7 @@ function initApp() {
 
 function initTabs() {
     document.querySelectorAll(".tab-link").forEach(addClick); // add click event to all tab-links
-    // if hash - if tab already selected (see hash in browser)
+    // if hash - if tab already selected (see #hash in browser)
     if (location.hash) {
         showTab(location.hash);
     } else {
