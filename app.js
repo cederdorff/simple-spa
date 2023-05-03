@@ -28,7 +28,7 @@ function showTab(selector) {
 }
 
 function hideAllTabs() {
-    // remove .active for all .tab-content elements (all tabs) and .tab-link (all links) elements
+    // remove .active for all .tab-content elements (all tabs) and .tab-link elements (all links)
     document.querySelectorAll(".tab-content").forEach(link => link.classList.remove("active"));
     document.querySelectorAll(".tab-link").forEach(link => link.classList.remove("active"));
 }
