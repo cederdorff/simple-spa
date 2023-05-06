@@ -3,20 +3,27 @@
 window.addEventListener("load", initApp);
 
 function initApp() {
-    window.addEventListener("hashchange", showTab);
-    showTab();
+    initTabs();
+}
+
+function initTabs() {
+    window.addEventListener("hashchange", showTab); // whenever the hash changes (you hit a link)
+    showTab(); // by default, call showTab to display the first view
 }
 
 function showTab() {
-    let tab = "#home";
+    let tab = "#home"; // default tab
+
     if (location.hash) {
         tab = location.hash;
     }
 
-    const tabLink = document.querySelector(`a.tab-link[href="${tab}"]`); // reference to link
     hideAllTabs(); // hide all tabs
-    tabLink.classList.add("active"); // add .active to "this" link
-    document.querySelector(tab).classList.add("active"); // add .active to the tab you want to show
+
+    const tabLink = document.querySelector(`a.tab-link[href="${tab}"]`); // reference to link in nav bar
+    tabLink.classList.add("active"); // add .active to active link in tab bar
+
+    document.querySelector(tab).classList.add("active"); // add .active to the tab view you want to show
 }
 
 function hideAllTabs() {
