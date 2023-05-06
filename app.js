@@ -12,18 +12,23 @@ function initTabs() {
 }
 
 function showTab() {
-    let tab = "#home"; // default tab
+    let hashLink = "#home"; // default tab
 
     if (location.hash) {
-        tab = location.hash;
+        hashLink = location.hash;
     }
 
     hideAllTabs(); // hide all tabs
 
-    const tabLink = document.querySelector(`a.tab-link[href="${tab}"]`); // reference to link in nav bar
-    tabLink.classList.add("active"); // add .active to active link in tab bar
+    document.querySelector(hashLink).classList.add("active"); // add .active to the tab view you want to show
+    setActiveLink(hashLink); // set active link in nav bar
+}
 
-    document.querySelector(tab).classList.add("active"); // add .active to the tab view you want to show
+function setActiveLink(tab) {
+    const tabLink = document.querySelector(`a.tab-link[href="${tab}"]`); // reference to link in nav bar
+    if (tabLink) {
+        tabLink.classList.add("active"); // add .active to active link in tab bar
+    }
 }
 
 function hideAllTabs() {
