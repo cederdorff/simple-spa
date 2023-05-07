@@ -1,5 +1,5 @@
 function initViews() {
-    window.addEventListener("hashchange", viewChange); // whenever the hash changes (you hit a link)
+    window.addEventListener("hashchange", viewChange); // whenever the hash changes (you hit a link or change the hash)
     viewChange(); // by default, call viewChange to display the first view
 }
 
