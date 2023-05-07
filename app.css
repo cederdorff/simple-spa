@@ -61,7 +61,7 @@ nav a.active {
     color: var(--green);
 }
 
-.tab-content {
+.view-content {
     display: none;
     padding: 248px 2em;
     height: 100%;
@@ -70,11 +70,11 @@ nav a.active {
 }
 
 @media (min-width: 600px) {
-    .tab-content {
+    .view-content {
         padding: 94px 2em;
     }
 }
 
-.tab-content.active {
+.view-content.active {
     display: block;
 }
